@@ -27,9 +27,7 @@ const SalaryCalculator = () => {
             else conversion = 0.63;
             setResult(tempSal * conversion);
         }
-        
     }
-
 
     return ( 
         <div className="sal-calc-container">
@@ -43,7 +41,6 @@ const SalaryCalculator = () => {
                 <CalculateButton onProcess={handleCalculations}/>
             </div>
             <h2>My real depressing salary is: ${result}</h2>
-
         </div>
      );
 }
