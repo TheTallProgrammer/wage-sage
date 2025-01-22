@@ -1,15 +1,20 @@
-import SalaryCalculator from './components/SalaryCalculator';
 import './styles/App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from './components/Navbar.jsx';
+import LandingPage from './pages/LandingPage.js';
+import CalculatorPage from './pages/CalculatorPage.js';
 
 function App() {
   return (
-    <div className="App">
-     <div>
-        <h2>Wage Sage</h2>
-        <p>Welcome to our site!</p>
-        <SalaryCalculator/>
-      </div>
-    </div>
+    <Router>
+        <Navbar/>
+        <div className="content-container">
+          <Routes>
+            <Route path="/" element={<LandingPage/>} />
+            <Route path="/calculator" element={<CalculatorPage/>} />
+          </Routes>
+        </div>
+    </Router>
   );
 }
 

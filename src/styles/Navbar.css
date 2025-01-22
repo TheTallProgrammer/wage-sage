@@ -1,0 +1,52 @@
+/* Navbar.css */
+
+.local-navbar-container {
+    background-color: #1a1a1a; /* Dark background color */
+    color: white;
+    padding: 10px 20px; /* Spacing around the navbar */
+    position: fixed; /* Sticks to the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  .nav-links {
+    display: flex; /* Horizontal layout for links */
+    justify-content: space-around; /* Evenly spaced links */
+    list-style: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .nav-links li {
+    margin: 0 10px; /* Add spacing between list items */
+  }
+  
+  .nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+  }
+  
+  .nav-links a:hover {
+    color: #00adb5; /* Accent color for hover effect */
+  }
+  
+  @media (max-width: 768px) {
+    .local-navbar-container {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .nav-links {
+      flex-direction: column; /* Stack links vertically */
+      align-items: center; /* Center-align links */
+    }
+  
+    .nav-links li {
+      margin: 10px 0; /* Add vertical spacing for stacked links */
+    }
+  }
+  
