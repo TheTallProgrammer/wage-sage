@@ -15,16 +15,19 @@ const SalaryCalculator = () => {
         var tempSal = parseFloat(salary).toFixed(2);
         var conversion = 0;
 
-        //single status
-        if(tempSal < 11926) conversion = .9;
-        else if(tempSal < 48476) conversion = 0.88;
-        else if(tempSal < 103351) conversion = 0.78;
-        else if(tempSal < 197301) conversion = 0.76;
-        else if(tempSal < 250525) conversion = 0.68;
-        else if(tempSal < 609351) conversion = 0.65;
-        else conversion = 0.63;
+        if(isNaN(tempSal)) setResult("Invalid Input")
+        else {
+            //single status
+            if(tempSal < 11926) conversion = .9;
+            else if(tempSal < 48476) conversion = 0.88;
+            else if(tempSal < 103351) conversion = 0.78;
+            else if(tempSal < 197301) conversion = 0.76;
+            else if(tempSal < 250525) conversion = 0.68;
+            else if(tempSal < 609351) conversion = 0.65;
+            else conversion = 0.63;
+            setResult(tempSal * conversion);
+        }
         
-        setResult(tempSal * conversion);
     }
 
 
